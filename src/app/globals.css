@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --ease-smooth: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background: #050505;
+  color: #f7f7f9;
+  overscroll-behavior: none;
+}
+
+body {
+  font-family: var(--font-jakarta), sans-serif;
+}
+
+/* Grano / estática analógica superpuesta a toda la experiencia */
+.grain-overlay {
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  opacity: 0.05;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+.tracking-ultra {
+  letter-spacing: 0.25em;
+}
+
+.text-gradient-silver {
+  background: linear-gradient(135deg, #ffffff 0%, #d4d4dc 40%, #8e8e9c 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+::selection {
+  background: #45bedf;
+  color: #050505;
+}
+
+/* Scrollbar discreta */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background: #2c2c36;
+}
